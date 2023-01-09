@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta
+      name="viewport"
+      content="width=device-device-width, initial-scale=1.0"
+    />
+    <title>SUP-kamperen</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>SUP-kamperen</h1>
+      </header>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a class="button" href="index.html">Home</a>
+          </li>
+          <li><a class="button" href="benodigdheden.html">Benodigdheden</a></li>
+          <li>
+            <b><a class="button" href="routeplanner.html">Routeplanner</a></b>
+          </li>
+        </ul>
+      </nav>
+
+      <figure class="image">
+        <img src="./Fotos/Routekaart.jpg" alt="Twee SUPs liggen voor de tent" />
+      </figure>
+
+      <article class="tekst">
+        <h1>Aanvraag</h1>
+
+        <form name="aanvraagroute" method="POST" netlify>
+          <div class="formroute">
+            <p>
+              <label for="afstand">Afstand per dag</label>
+              <select name="afstand">
+                <option value="kies afstand">Kies afstand</option>
+                <option value="max5km">maximaal 5 km</option>
+                <option value="max7km">maximaal 7 km</option>
+                <option value="max10km">maximaal 10 km</option>
+                <option value="max15km">maximaal 15 km</option>
+              </select>
+            </p>
+            <p>
+              <label for="firstname">Voornaam</label>
+              <input type="text" />
+            </p>
+            <p>
+              <label for="lastname">Achternaam</label>
+              <input type="text" />
+            </p>
+            <p>
+              <label for="email">E-mailadres</label>
+              <input type="email" />
+            </p>
+            <p>
+              <label for="aantaldagen">Aantal dagen</label>
+              <input type="number" min="2" />
+            </p>
+
+            <p>
+              <label for="rustdagen">Ik wil (een) rustdag(en):</label>
+              <input type="radio" name="rustdagen" value="Ja" />Ja
+              <input type="radio" name="rustdagen" value="Nee" />Nee
+            </p>
+            <p>
+              <label for="hoeveel">Indien ja, hoeveel?</label>
+              <select name="hoeveel">
+                <option value="kies aantal">Kies aantal</option>
+                <option value="1">1 rustdag</option>
+                <option value="2">2 rustdagen</option>
+                <option value="3">3 rustdagen</option>
+              </select>
+            </p>
+            <p>
+              <label for="extra info">Aanvullende informatie</label>
+            </p>
+            <p>
+              <textarea name="extra info" rows="10" cols="35"></textarea>
+            </p>
+            <button>Verstuur</button>
+          </div>
+        </form>
+      </article>
+      <footer class="footer">Made by Frederiek</footer>
+    </div>
+  </body>
+</html>
